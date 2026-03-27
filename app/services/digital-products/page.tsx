@@ -1,4 +1,11 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Social Media & Digital Products',
+  description: 'Real estate social media templates, listing content kits, digital assets and Canva templates that keep your brand consistent across every platform.',
+  alternates: { canonical: 'https://ibfinity.com/services/digital-products' },
+}
 
 const products = [
   { num: '01', title: 'Editable Planners', desc: 'Daily, weekly, monthly, and yearly planners in Canva. Fully customisable — buyers can personalise them without any design skills.' },

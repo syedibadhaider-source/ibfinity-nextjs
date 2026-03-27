@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&display=swap');
+/* Fonts loaded via <link> in layout.tsx for better performance */
 
 /* ═══════════════════════════════════════════════
    COLOUR SYSTEM
@@ -30,14 +30,18 @@ html { scroll-behavior:smooth; -webkit-font-smoothing:antialiased; -moz-osx-font
 
 body {
   font-family:'Inter',sans-serif;
-  background:#fff;
+  background:#EDEEF5;
   color:#0E0E28;
   overflow-x:hidden;
   cursor:none; /* hide default, custom cursor takes over */
 }
 
-/* Restore cursor on mobile */
-@media (pointer:coarse) { body { cursor:auto; } }
+/* Restore cursor on mobile/touch */
+@media (pointer:coarse), (max-width:767px) {
+  body { cursor:auto; }
+  .btn-primary, .btn-outline { cursor:pointer; }
+  #cursor-dot, #cursor-ring { display:none !important; }
+}
 
 /* ═══════════════════════════════════════════════
    CUSTOM CURSOR
@@ -100,7 +104,7 @@ body.cursor-click #cursor-ring { width:28px;height:28px; }
   background:linear-gradient(135deg,#8B5CF6,#7C3AED);
   color:#fff;
   font-weight:600; font-size:14px; letter-spacing:0.01em;
-  border-radius:8px; border:none; cursor:none;
+  border-radius:8px; border:none; cursor:pointer;
   text-decoration:none; position:relative; overflow:hidden;
   transition:transform .2s,box-shadow .2s;
   box-shadow:0 4px 24px rgba(139,92,246,0.35);
@@ -121,7 +125,7 @@ body.cursor-click #cursor-ring { width:28px;height:28px; }
   color:rgba(240,238,255,0.65);
   font-weight:500; font-size:14px; letter-spacing:0.01em;
   border-radius:8px; border:1px solid rgba(255,255,255,0.12);
-  cursor:none; text-decoration:none;
+  cursor:pointer; text-decoration:none;
   transition:all .2s;
 }
 .btn-outline:hover { border-color:rgba(255,255,255,0.3);color:#F0EEFF;background:rgba(255,255,255,0.04); }
@@ -144,7 +148,8 @@ body.cursor-click #cursor-ring { width:28px;height:28px; }
   letter-spacing:0.12em; text-transform:uppercase;
 }
 .label-dim   { color:rgba(255,255,255,0.3); }
-.label-muted { color:rgba(14,14,40,0.35); }
+.label-muted { color:rgba(240,238,255,0.35); }
+.label-light { color:rgba(240,238,255,0.3); }
 .label-p     { color:#8B5CF6; }
 
 /* ═══════════════════════════════════════════════
@@ -230,11 +235,11 @@ body.cursor-click #cursor-ring { width:28px;height:28px; }
 /* ═══════════════════════════════════════════════
    SERVICE ROWS
 ═══════════════════════════════════════════════ */
-.service-row { border-bottom:1px solid rgba(0,0,0,0.07); transition:background .25s,padding .25s; }
-.service-row:hover { background:#F6F4FF; }
+.service-row { border-bottom:1px solid rgba(14,14,40,0.06); transition:background .25s,padding .25s; }
+.service-row:hover { background:rgba(139,92,246,0.05); }
 .service-row:hover .service-num  { color:#8B5CF6; }
 .service-row:hover .service-arrow{ transform:translate(4px,-4px); opacity:1; }
-.service-num   { transition:color .25s; color:rgba(0,0,0,0.18); }
+.service-num   { transition:color .25s; color:rgba(240,238,255,0.2); }
 .service-arrow { opacity:0; transition:transform .25s, opacity .25s; }
 
 /* ═══════════════════════════════════════════════
@@ -291,35 +296,36 @@ body.cursor-click #cursor-ring { width:28px;height:28px; }
    BENTO CARDS
 ═══════════════════════════════════════════════ */
 .bento-card {
-  border-radius:20px;
-  border:1px solid rgba(0,0,0,0.07);
-  background:#fff;
+  border-radius:24px;
+  border:1px solid rgba(14,14,40,0.08);
+  background:#FFFFFF;
   overflow:hidden;
   position:relative;
+  box-shadow:0 1px 4px rgba(14,14,40,0.04), 0 4px 16px rgba(14,14,40,0.04);
   transition:transform .3s cubic-bezier(.23,1,.32,1), box-shadow .3s;
 }
 .bento-card:hover {
-  transform:translateY(-4px);
-  box-shadow:0 20px 60px rgba(0,0,0,0.1);
+  transform:translateY(-3px);
+  box-shadow:0 8px 32px rgba(14,14,40,0.1), 0 2px 8px rgba(14,14,40,0.06);
 }
 .bento-card::before {
   content:'';
   position:absolute; inset:0;
-  background:linear-gradient(135deg,rgba(139,92,246,0.04),transparent 60%);
+  background:linear-gradient(135deg,rgba(139,92,246,0.05),transparent 60%);
   opacity:0; transition:opacity .3s;
   pointer-events:none; z-index:1;
 }
 .bento-card:hover::before { opacity:1; }
 
-/* Gradient border on hover */
+/* Gradient border glow */
 .bento-card-glow {
   position:relative;
 }
 .bento-card-glow::after {
   content:'';
   position:absolute; inset:-1px;
-  border-radius:21px;
-  background:linear-gradient(135deg,transparent 0%,rgba(139,92,246,0.3) 50%,transparent 100%);
+  border-radius:25px;
+  background:linear-gradient(135deg,transparent 0%,rgba(139,92,246,0.25) 50%,transparent 100%);
   opacity:0;
   transition:opacity .3s;
   z-index:-1;
@@ -370,13 +376,52 @@ body.cursor-click #cursor-ring { width:28px;height:28px; }
 .group:hover .mask-reveal { clip-path:inset(0 0% 0 0); }
 
 /* ═══════════════════════════════════════════════
+   TAG DROP ANIMATION
+═══════════════════════════════════════════════ */
+@keyframes tagDrop {
+  0%   { opacity:0; transform:translateY(-55px) scale(0.65); }
+  55%  { opacity:1; transform:translateY(7px) scale(1.06); }
+  72%  { transform:translateY(-4px) scale(0.97); }
+  88%  { transform:translateY(3px) scale(1.02); }
+  100% { opacity:1; transform:translateY(0) scale(1); }
+}
+.tag-drop {
+  opacity:0;
+  animation:tagDrop 0.55s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+/* ═══════════════════════════════════════════════
    SCROLLBAR
 ═══════════════════════════════════════════════ */
 ::-webkit-scrollbar { width:4px; }
-::-webkit-scrollbar-track { background:#04040C; }
+::-webkit-scrollbar-track { background:#EDEEF5; }
 ::-webkit-scrollbar-thumb { background:linear-gradient(180deg,#8B5CF6,#F97316); border-radius:2px; }
 
 /* ═══════════════════════════════════════════════
    SELECTION
 ═══════════════════════════════════════════════ */
 ::selection { background:rgba(139,92,246,0.3); color:#F0EEFF; }
+
+/* ═══════════════════════════════════════════════
+   MOBILE OVERRIDES
+═══════════════════════════════════════════════ */
+@media (max-width: 767px) {
+  /* Tag cloud: flex-wrap on mobile instead of absolute scatter */
+  .tags-mobile-wrap {
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    height:auto !important;
+  }
+  .tags-mobile-wrap > div {
+    position:static !important;
+    left:auto !important;
+    top:auto !important;
+  }
+  /* Ensure min tap target size 44px */
+  a, button { min-height:44px; }
+  /* Slightly smaller padding on bento cards */
+  .bento-card { border-radius:20px; }
+  /* Full-width CTA buttons on mobile */
+  .mobile-full { width:100%; justify-content:center; }
+}

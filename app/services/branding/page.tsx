@@ -1,4 +1,12 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Agent & Broker Branding',
+  description: 'Complete personal brand identity for real estate agents and brokers — logo, colour palette, typography, business cards, social kit & brand guidelines.',
+  alternates: { canonical: 'https://ibfinity.com/services/branding' },
+  openGraph: { title: 'Agent & Broker Branding | Ibfinity', url: 'https://ibfinity.com/services/branding' },
+}
 
 const steps = [
   { num: '01', title: 'Market & Competitor Research', desc: 'We analyse your local real estate market, your competition, and what top-producing agents and agencies in your area look like — then find the white space where your brand can own.' },

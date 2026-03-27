@@ -1,4 +1,11 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Agency & Firm Identity',
+  description: 'Full rebranding for real estate agencies and brokerage firms — visual identity rebuilt from the ground up with strategy, design, and guidelines.',
+  alternates: { canonical: 'https://ibfinity.com/services/rebranding' },
+}
 
 const steps = [
   { num: '01', title: 'Brand Audit', desc: 'We dissect your current brand — what works, what doesn\'t, and why. Competitor analysis reveals white space you can own.' },

@@ -1,4 +1,11 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Property Marketing & Print',
+  description: 'Real estate print design — listing brochures, yard signs, property flyers, presentation decks and all marketing materials that sell properties.',
+  alternates: { canonical: 'https://ibfinity.com/services/print' },
+}
 
 const items = [
   { num: '01', title: 'Business Cards', desc: 'Premium cards that make a lasting first impression — unique finishes, die-cut options, and designs that reflect your brand personality.' },

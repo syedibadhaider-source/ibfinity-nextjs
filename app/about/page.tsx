@@ -1,4 +1,13 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description: 'Meet the team behind Ibfinity — a founder-led real estate design studio with 11+ years of experience serving agents, brokers, developers and agencies worldwide.',
+  alternates: { canonical: 'https://ibfinity.com/about' },
+  openGraph: { title: 'About Ibfinity', description: 'Founder-led real estate branding studio — 11+ years, 1,200+ clients.', url: 'https://ibfinity.com/about' },
+}
 
 const values = [
   { num: '01', title: 'Real Estate Only', desc: 'We work exclusively with real estate professionals. No generalist work. We know your market, your buyers, and what it takes to stand out in it.' },
@@ -15,9 +24,27 @@ const stats = [
 ]
 
 const team = [
-  { initials: 'IB', name: 'Ibrahim', role: 'Founder & Creative Director', color: '#8B5CF6' },
-  { initials: 'AS', name: 'Aisha S.', role: 'Brand Strategist', color: '#F97316' },
-  { initials: 'KM', name: 'Kai M.', role: 'Senior Designer', color: '#06B6D4' },
+  {
+    name: 'Ibad Haider',
+    role: 'Founder & Creative Director',
+    bio: 'Ibad leads the agency with over a decade of hands-on experience in branding and digital systems execution — senior-level oversight on every engagement.',
+    photo: 'https://i.ibb.co/JFbZpbGf/Ibad.png',
+    accent: '#8B5CF6',
+  },
+  {
+    name: 'Syed Hamad',
+    role: 'WordPress & SEO Strategist',
+    bio: 'Leads WordPress implementation, technical SEO, and site performance architecture for search-ready and scalable delivery.',
+    photo: 'https://i.ibb.co/qMPgW3bF/hamad.png',
+    accent: '#6D28D9',
+  },
+  {
+    name: 'Saif Ali',
+    role: 'Shopify & Paid Ads Specialist',
+    bio: 'Drives Shopify growth with social media marketing, Meta ads, and Google ads structured for conversion efficiency.',
+    photo: 'https://i.ibb.co/Nns1XjRW/saif.png',
+    accent: '#7C3AED',
+  },
 ]
 
 export default function AboutPage() {
@@ -116,23 +143,38 @@ export default function AboutPage() {
           <span className="label label-p tracking-widest mb-4 block">The Team</span>
           <div className="flex items-end justify-between mb-14">
             <h2 className="text-[clamp(36px,4vw,56px)] font-black tracking-[-0.04em] text-dark-3 leading-none">
-              Small team.<br />
-              <span className="font-display italic" style={{ background:'linear-gradient(135deg,#8B5CF6,#F97316)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>Outsized results.</span>
+              Founder-led.<br />
+              <span className="font-display italic" style={{ background:'linear-gradient(135deg,#8B5CF6,#F97316)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>Experience-driven.</span>
             </h2>
             <p className="hidden lg:block text-dark-3/40 text-[15px] max-w-xs text-right leading-relaxed">
-              We keep our team lean on purpose. Every client gets senior attention, not interns.
+              Every project gets direct founder attention — no hand-offs, no juniors.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {team.map((t) => (
-              <div key={t.initials} className="bento-card bento-card-glow p-8 flex items-center gap-5">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-white font-black text-lg shrink-0"
-                  style={{ background: t.color }}>
-                  {t.initials}
+              <div key={t.name} className="bento-card bento-card-glow overflow-hidden flex flex-col">
+                {/* Photo */}
+                <div className="w-full"
+                  style={{ background: `linear-gradient(135deg,${t.accent}18,${t.accent}08)` }}>
+                  <Image
+                    src={t.photo}
+                    alt={t.name}
+                    width={400}
+                    height={400}
+                    className="w-full h-auto object-contain"
+                    unoptimized
+                  />
                 </div>
-                <div>
-                  <div className="font-black text-dark-3 text-[17px]">{t.name}</div>
-                  <div className="text-dark-3/40 text-[13px] mt-0.5">{t.role}</div>
+                {/* Info */}
+                <div className="px-7 pb-7 pt-3 flex flex-col gap-2 flex-1">
+                  <div>
+                    <div className="font-black text-dark-3 text-[19px] tracking-tight">{t.name}</div>
+                    <div className="text-[13px] font-bold mt-0.5"
+                      style={{ color: t.accent }}>
+                      {t.role}
+                    </div>
+                  </div>
+                  <p className="text-dark-3/45 text-[14px] leading-relaxed mt-1">{t.bio}</p>
                 </div>
               </div>
             ))}

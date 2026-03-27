@@ -1,4 +1,11 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Services',
+  description: 'Real estate graphic design services — agent branding, agency identity, property marketing, print design, social media & digital products. Built for real estate professionals.',
+  alternates: { canonical: 'https://ibfinity.com/services' },
+}
 
 const services = [
   {
