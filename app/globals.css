@@ -67,10 +67,10 @@ body {
   pointer-events:none;
   z-index:9998;
   transform:translate(-50%,-50%);
-  transition:width .4s cubic-bezier(.23,1,.32,1),
-             height .4s cubic-bezier(.23,1,.32,1),
-             border-color .3s,
-             opacity .3s;
+  transition:width .2s cubic-bezier(.23,1,.32,1),
+             height .2s cubic-bezier(.23,1,.32,1),
+             border-color .2s,
+             opacity .2s;
 }
 body.cursor-hover #cursor-dot  { width:12px;height:12px;background:var(--s); }
 body.cursor-hover #cursor-ring { width:56px;height:56px;border-color:rgba(249,115,22,0.5); }

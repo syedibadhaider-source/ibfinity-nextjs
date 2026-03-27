@@ -25,8 +25,8 @@ export default function CustomCursor() {
     // Ring lags behind with lerp
     const lerp = (a: number, b: number, t: number) => a + (b - a) * t
     const tick = () => {
-      ringPos.current.x = lerp(ringPos.current.x, posRef.current.x, 0.12)
-      ringPos.current.y = lerp(ringPos.current.y, posRef.current.y, 0.12)
+      ringPos.current.x = lerp(ringPos.current.x, posRef.current.x, 0.25)
+      ringPos.current.y = lerp(ringPos.current.y, posRef.current.y, 0.25)
       ring.style.left = `${ringPos.current.x}px`
       ring.style.top  = `${ringPos.current.y}px`
       rafRef.current = requestAnimationFrame(tick)
