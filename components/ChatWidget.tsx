@@ -180,7 +180,7 @@ export default function ChatWidget() {
                 </div>
                 <div className="rounded-2xl rounded-tl-sm px-4 py-3 text-[14px] leading-relaxed"
                   style={{ background: 'rgba(124,58,237,0.07)', color: '#0E0E28' }}>
-                  Hey! 👋 How can we help you today? We're a real estate design studio — reach us instantly below.
+                  Hey! 👋 How can we help you today? We&apos;re a real estate design studio — reach us instantly below.
                 </div>
               </div>
 
@@ -293,7 +293,7 @@ export default function ChatWidget() {
               </div>
               <div className="text-[#0E0E28] font-bold text-[18px] mb-2">Message sent!</div>
               <p className="text-[#0E0E28]/45 text-[14px] leading-relaxed">
-                We'll get back to you within 24 hours.
+                We&apos;ll get back to you within 24 hours.
               </p>
               <button
                 onClick={() => setView('home')}
