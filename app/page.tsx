@@ -277,8 +277,8 @@ export default function Home() {
           {/* ── SERVICE TAGS — scattered drop animation ── */}
           <div ref={tagsRef} className="col-span-12 lg:col-span-6 bento-card p-6 lg:p-8">
             <div className="text-[#0E0E28]/40 text-[10px] font-semibold tracking-widest uppercase mb-4">What We Do</div>
-            {/* Absolute-positioned scattered tags that drop in one by one (flex-wrap on mobile) */}
-            <div className="tags-mobile-wrap relative" style={{ height: 152 }}>
+            {/* Tags fall from above and stack naturally in flex-wrap layout */}
+            <div className="flex flex-wrap gap-2 content-start" style={{ minHeight: 140 }}>
               {TAG_DATA.map((tag) => {
                 const c = BRAND_COLORS[tag.ci]
                 return (
@@ -286,10 +286,8 @@ export default function Home() {
                     key={tag.text}
                     className={tagsVisible ? 'tag-drop' : 'opacity-0'}
                     style={{
-                      position: 'absolute',
-                      left: tag.left,
-                      top: tag.top,
-                      animationDelay: tagsVisible ? `${tag.order * 0.13}s` : undefined,
+                      ['--tag-rot' as string]: `${tag.rot}deg`,
+                      animationDelay: tagsVisible ? `${tag.order * 0.15}s` : undefined,
                     }}>
                     <span style={{
                       display: 'inline-block',
