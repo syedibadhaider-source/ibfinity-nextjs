@@ -40,7 +40,7 @@ const SERVICES = [
   {
     href: '/services/branding', num: '01',
     title: 'Agent & Broker Branding',
-    desc: 'Personal brand identity designed to dominate your local market — logo, colour palette, typography, business cards, social kit & complete brand guidelines.',
+    desc: 'A powerful personal brand identity built to dominate your local market. We deliver a full logo system, colour palette, typography, business cards, social media kit, listing templates, and complete brand guidelines — everything you need to look like the top agent in your area from day one.',
     tags: ['Logo Design', 'Brand Strategy', 'Business Cards', 'Social Kit'],
     color: '#8B5CF6',
   },
@@ -187,8 +187,8 @@ export default function Home() {
                   </span>
                 </span>
               </h1>
-              <p className="text-[#0E0E28]/55 text-[16px] max-w-[420px] leading-relaxed font-light">
-                Premium graphic design and web studio built exclusively for real estate professionals who refuse to blend in.
+              <p className="text-[#0E0E28]/55 text-[16px] max-w-[460px] leading-relaxed font-light">
+                We craft premium brand identities, print collateral, and digital assets exclusively for real estate agents, brokers, developers, and agencies. No generalists. No guesswork — just designs that make clients choose you over every competitor in your market.
               </p>
             </div>
 
@@ -225,7 +225,7 @@ export default function Home() {
                 </h2>
               </div>
               <p className="relative z-10 text-white/65 text-[13px] leading-relaxed mt-4">
-                Agents, brokers, developers & agencies — no generalist work, ever.
+                From solo agents building personal brands to developers launching flagship projects — we know real estate inside out. That&apos;s why every design we produce connects with buyers and sellers on a deeper level.
               </p>
             </div>
 
@@ -407,8 +407,8 @@ export default function Home() {
                   0% Generic.
                 </span>
               </h2>
-              <p className="text-white/55 text-[15px] max-w-xl mx-auto leading-relaxed">
-                We don&apos;t design for restaurants, startups, or fashion brands. Every tool, template, and strategy we have is engineered for one industry — real estate.
+              <p className="text-white/55 text-[15px] max-w-2xl mx-auto leading-relaxed">
+                We don&apos;t design for restaurants, startups, or fashion brands. Every tool, template, and process in our studio has been built specifically for real estate. The result? Brand identities that speak your clients&apos; language, build instant trust, and keep you top-of-mind long after the first impression.
               </p>
             </div>
           </div>
@@ -425,7 +425,7 @@ export default function Home() {
             <div className="relative z-10">
               <div className="text-[#0E0E28]/40 text-[10px] font-semibold tracking-widest uppercase mb-4">Featured Work</div>
               <h3 className="text-[25px] font-black text-[#0E0E28] tracking-tight mb-2">The Grand Residences</h3>
-              <p className="text-[#0E0E28]/50 text-[13px] mb-6 leading-relaxed">Luxury developer branding — complete visual identity for a premium residential development.</p>
+              <p className="text-[#0E0E28]/50 text-[13px] mb-6 leading-relaxed">End-to-end visual identity for a luxury residential development — logo system, brand guidelines, sales brochures, hoarding signage, and a full digital presence. Sold Phase 1 before construction was complete.</p>
               <div className="flex gap-2 flex-wrap">
                 {['Brand Identity', 'Luxury Developer', 'Print & Digital'].map(t => (
                   <span key={t} className="px-3 py-1.5 rounded-full text-[11px] text-[#0E0E28]/50"
@@ -440,8 +440,8 @@ export default function Home() {
           {/* 2 stacked project cards */}
           <div className="col-span-12 lg:col-span-5 flex flex-col gap-3 lg:gap-4">
             {[
-              { name: 'Hartley & Co.', desc: 'Agency identity for a boutique real estate firm.', tag: 'Agency Identity', color: '#6D28D9' },
-              { name: 'Mark Evans REALTOR', desc: 'Agent personal brand — premium and trust-building.', tag: 'Agent Branding', color: '#8B5CF6' },
+              { name: 'Hartley & Co.', desc: 'Full rebrand for a boutique real estate firm — new visual language, stationery suite, and branded digital templates their agents use daily to win listings.', tag: 'Agency Identity', color: '#6D28D9' },
+              { name: 'Mark Evans REALTOR', desc: 'Personal brand identity positioning a top-producing agent as the go-to expert in his local market — logo, social kit, and listing collateral.', tag: 'Agent Branding', color: '#8B5CF6' },
             ].map(p => (
               <div key={p.name} className="bento-card p-7 flex-1 relative overflow-hidden" style={{ minHeight: 160 }}>
                 <div className="absolute top-0 right-0 w-40 h-40 pointer-events-none"
@@ -547,8 +547,8 @@ export default function Home() {
                 impossible to ignore.
               </span>
             </h2>
-            <p className="text-white/55 text-[15px] mb-10 max-w-lg mx-auto leading-relaxed">
-              Free consultation. No pressure. Just a conversation about where your brand is — and where it should be.
+            <p className="text-white/55 text-[15px] mb-10 max-w-xl mx-auto leading-relaxed">
+              Whether you&apos;re a solo agent ready to stand out or a developer launching a landmark project — let&apos;s talk. Free consultation, zero pressure. Just an honest conversation about where your brand is today and exactly what it takes to make it impossible to ignore.
             </p>
             <Link href="/contact" className="btn-primary inline-flex px-10 py-5 text-[15px]">
               Start Your Brand Project
