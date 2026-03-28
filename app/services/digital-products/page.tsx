@@ -2,24 +2,32 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Social Media & Digital Products',
-  description: 'Real estate social media templates, listing content kits, digital assets and Canva templates that keep your brand consistent across every platform.',
+  title: 'Social Media & Digital',
+  description: 'Real estate social media templates, Instagram content kits, listing graphics, reels covers, email signatures, and digital ad creatives — all branded for real estate professionals.',
   alternates: { canonical: 'https://ibfinity.com/services/digital-products' },
 }
 
-const products = [
-  { num: '01', title: 'Editable Planners', desc: 'Daily, weekly, monthly, and yearly planners in Canva. Fully customisable — buyers can personalise them without any design skills.' },
-  { num: '02', title: 'Business Templates', desc: 'Proposals, presentations, invoices, and media kits. Professional templates that save buyers hours and look better than anything they\'d make themselves.' },
-  { num: '03', title: 'Social Media Packs', desc: 'Post templates, story covers, highlight icons, and reels frames. Cohesive sets that make any brand look instantly polished on Instagram.' },
-  { num: '04', title: 'SVG & Clipart', desc: 'Cut files for Cricut, sublimation-ready PNGs, and vector clipart sets. Designed for the crafting market with unlimited commercial licences.' },
-  { num: '05', title: 'Printable Wall Art', desc: 'Instant-download art for home decor — motivational quotes, botanical prints, and abstract designs that sell consistently year-round.' },
+const items = [
+  { num: '01', title: 'Instagram Content Kits', desc: 'Post templates, story frames, highlight covers, and carousel layouts — a full set of on-brand content so every post looks intentional, not improvised.' },
+  { num: '02', title: 'LinkedIn Templates', desc: 'Professional post graphics, banner updates, and announcement templates. Built for the platform where buyers, investors, and referrals live.' },
+  { num: '03', title: 'Listing Graphic Templates', desc: 'Just listed, just sold, price reduction, and open house announcement graphics. Editable in Canva — update the address and post in minutes.' },
+  { num: '04', title: 'Reels & Story Templates', desc: 'Animated reels cover frames, countdown story templates, and property walkthrough text overlays. Designed to stop the scroll and drive enquiries.' },
+  { num: '05', title: 'Email Signatures & Digital Ads', desc: 'Pixel-perfect HTML email signatures and digital ad creatives for Google, Facebook, and Instagram — consistent with your brand at every digital touchpoint.' },
 ]
 
 const deliverables = [
-  'Canva template files (editable links)','PDF / PNG print-ready exports',
-  'SVG & EPS vector files','Commercial use licence',
-  'Etsy listing images + mockups','Keyword-optimised product descriptions',
-  'Multiple size variants','Buyer instruction guide',
+  'Instagram post templates (Canva, editable)',
+  'Instagram story templates (branded)',
+  'Highlight cover icon set',
+  'LinkedIn banner + post template',
+  'Just listed / just sold graphics',
+  'Open house announcement template',
+  'Price reduction graphic',
+  'Reels cover frame templates',
+  'HTML email signature (all clients)',
+  'Digital ad creatives (Facebook, Instagram, Google)',
+  'Brand colour & font guide for Canva',
+  'Usage guide + how-to PDF',
 ]
 
 export default function DigitalProductsPage() {
@@ -38,20 +46,12 @@ export default function DigitalProductsPage() {
           </Link>
           <span className="label label-p tracking-widest mb-5 block">Service 04</span>
           <h1 className="text-[clamp(52px,6.5vw,92px)] font-black tracking-[-0.045em] leading-[0.93] text-dark-3 mb-6">
-            Etsy Digital<br />
-            <span className="font-display italic" style={{ background:'linear-gradient(125deg,#F97316,#FB923C,#8B5CF6)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>Products.</span>
+            Social Media<br />
+            <span className="font-display italic" style={{ background:'linear-gradient(125deg,#F97316,#FB923C,#8B5CF6)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>&amp; Digital.</span>
           </h1>
           <p className="text-[17px] text-dark-3/45 max-w-[480px] leading-relaxed font-light">
-            High-converting Canva templates and digital downloads — engineered for Etsy marketplace success from day one.
+            Instagram content kits, listing templates, reels covers, and digital ad creatives — all branded for real estate so every post builds your profile.
           </p>
-          <div className="flex items-center gap-3 mt-8">
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 border border-amber-200">
-              <span className="text-amber-600 text-[12px] font-bold">★ #1 in Category</span>
-            </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200">
-              <span className="text-emerald-700 text-[12px] font-bold">500+ Downloads</span>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -59,15 +59,15 @@ export default function DigitalProductsPage() {
         <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
           <div className="flex items-end justify-between mb-16">
             <div>
-              <span className="label label-p tracking-widest mb-4 block">Product Types</span>
+              <span className="label label-p tracking-widest mb-4 block">What We Create</span>
               <h2 className="text-[clamp(36px,4vw,56px)] font-black tracking-[-0.04em] text-dark-3 leading-none">
-                Designed to sell.<br />
-                <span className="font-display italic" style={{ background:'linear-gradient(135deg,#F97316,#8B5CF6)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>From day one.</span>
+                Content that builds<br />
+                <span className="font-display italic" style={{ background:'linear-gradient(135deg,#F97316,#8B5CF6)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>your brand.</span>
               </h2>
             </div>
           </div>
           <div className="border-t border-black/6">
-            {products.map((s) => (
+            {items.map((s) => (
               <div key={s.num} className="service-row">
                 <div className="grid grid-cols-12 gap-4 items-start py-9 px-2">
                   <div className="col-span-1"><span className="service-num label font-mono text-sm">{s.num}</span></div>
@@ -84,12 +84,12 @@ export default function DigitalProductsPage() {
         <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             <div className="lg:col-span-5">
-              <span className="label label-p tracking-widest mb-4 block">What&apos;s Included</span>
+              <span className="label label-p tracking-widest mb-4 block">What You Get</span>
               <h2 className="text-[clamp(36px,4vw,52px)] font-black tracking-[-0.04em] text-dark-3 leading-none mb-6">
-                Ready to list<br />
-                <span className="font-display italic" style={{ background:'linear-gradient(135deg,#F97316,#8B5CF6)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>on Etsy.</span>
+                Post with confidence.<br />
+                <span className="font-display italic" style={{ background:'linear-gradient(135deg,#F97316,#8B5CF6)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>Every time.</span>
               </h2>
-              <p className="text-dark-3/45 text-[15px] leading-relaxed mb-8">Every product comes with everything you need to list, sell, and deliver — including mockup images and listing copy.</p>
+              <p className="text-dark-3/45 text-[15px] leading-relaxed mb-8">Every template is editable in Canva — update the content and post in minutes, no design skills required.</p>
               <Link href="/contact" className="btn-primary inline-flex px-8 py-4">
                 Get a Quote
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
@@ -115,11 +115,11 @@ export default function DigitalProductsPage() {
         </div>
         <div className="relative z-10 max-w-[1440px] mx-auto px-8 lg:px-16 text-center">
           <h2 className="text-[clamp(36px,5vw,72px)] font-black tracking-[-0.04em] text-white leading-none mb-8">
-            Ready to launch your<br />
-            <span className="font-display italic" style={{ background:'linear-gradient(135deg,#FB923C,#A78BFA)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>Etsy store?</span>
+            Ready to show up<br />
+            <span className="font-display italic" style={{ background:'linear-gradient(135deg,#FB923C,#A78BFA)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>on social?</span>
           </h2>
           <Link href="/contact" className="btn-primary inline-flex px-10 py-4 text-[15px]">
-            Start Your Digital Product
+            Start Your Digital Kit
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </Link>
         </div>

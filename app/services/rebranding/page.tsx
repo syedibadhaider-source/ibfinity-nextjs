@@ -3,22 +3,31 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Agency & Firm Identity',
-  description: 'Full rebranding for real estate agencies and brokerage firms — visual identity rebuilt from the ground up with strategy, design, and guidelines.',
+  description: 'Complete brand systems for real estate agencies and brokerage firms — visual identity, brand guidelines, signage standards, and team onboarding kit built from the ground up.',
   alternates: { canonical: 'https://ibfinity.com/services/rebranding' },
 }
 
 const steps = [
-  { num: '01', title: 'Brand Audit', desc: 'We dissect your current brand — what works, what doesn\'t, and why. Competitor analysis reveals white space you can own.' },
-  { num: '02', title: 'Repositioning Strategy', desc: 'We redefine your brand\'s position, personality, and promise. This strategy document becomes your north star going forward.' },
-  { num: '03', title: 'Identity Redesign', desc: 'With strategy locked, we redesign your visual identity — new logomark, colours, and typography that match who you\'re becoming.' },
-  { num: '04', title: 'Asset Migration', desc: 'We produce the full suite of new assets and help you migrate from old to new — without losing brand equity in the process.' },
+  { num: '01', title: 'Brand Audit', desc: 'We dissect your current brand — what works, what doesn\'t, and why. Competitor analysis across your market reveals the white space your agency can own.' },
+  { num: '02', title: 'Positioning Strategy', desc: 'We define your agency\'s market position, brand personality, and promise — whether that\'s luxury residential, commercial, or high-volume sales. This strategy document becomes your north star.' },
+  { num: '03', title: 'Visual Identity Design', desc: 'New logomark, colour system, and typography crafted for agency scale — designed to look authoritative on office signage, team business cards, listings, and digital channels.' },
+  { num: '04', title: 'Signage & Collateral Standards', desc: 'We produce your signage system: for-sale boards, hoarding templates, office fascia guidelines, and vehicle livery — consistent across every agent and every property.' },
+  { num: '05', title: 'Team Onboarding Kit', desc: 'A complete toolkit so every agent joins with the right assets from day one — business cards, email signatures, social profiles, listing templates, and a brand guidelines PDF.' },
 ]
 
 const deliverables = [
-  'Brand audit report','Positioning & strategy document',
-  'New logomark (multiple variations)','Updated colour system',
-  'Typography refresh','Brand guidelines (updated)',
-  'Key asset redesign (cards, email sig, social)','Migration checklist',
+  'Brand audit report',
+  'Positioning & strategy document',
+  'Logomark (primary, secondary & icon)',
+  'Colour system + hex/CMYK/RGB specs',
+  'Typography system (2–3 fonts)',
+  'Brand guidelines PDF (20+ pages)',
+  'Signage standards (for-sale, hoarding, office)',
+  'Team business card template',
+  'Email signature template',
+  'Social media profile kit (IG, LinkedIn, Facebook)',
+  'Listing graphic template (Canva)',
+  'Agent onboarding checklist',
 ]
 
 export default function RebrandingPage() {
@@ -37,10 +46,12 @@ export default function RebrandingPage() {
           </Link>
           <span className="label label-p tracking-widest mb-5 block">Service 02</span>
           <h1 className="text-[clamp(52px,6.5vw,92px)] font-black tracking-[-0.045em] leading-[0.93] text-dark-3 mb-6">
-            Complete<br />
-            <span className="font-display italic" style={{ background:'linear-gradient(125deg,#3B82F6,#8B5CF6,#F97316)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>Rebranding.</span>
+            Agency & Firm<br />
+            <span className="font-display italic" style={{ background:'linear-gradient(125deg,#3B82F6,#8B5CF6,#F97316)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>Identity.</span>
           </h1>
-          <p className="text-[17px] text-dark-3/45 max-w-[480px] leading-relaxed font-light">Transform what exists. We audit, reposition, and rebuild your brand into something worthy of the company you&apos;re becoming.</p>
+          <p className="text-[17px] text-dark-3/45 max-w-[480px] leading-relaxed font-light">
+            A complete brand system for your agency — from strategy and visual identity to signage standards and agent onboarding kits.
+          </p>
         </div>
       </section>
 
@@ -50,13 +61,13 @@ export default function RebrandingPage() {
             <div>
               <span className="label label-p tracking-widest mb-4 block">The Process</span>
               <h2 className="text-[clamp(36px,4vw,56px)] font-black tracking-[-0.04em] text-dark-3 leading-none">
-                Audit. Strategise.<br />
-                <span className="font-display italic" style={{ background:'linear-gradient(135deg,#8B5CF6,#F97316)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>Rebuild.</span>
+                Strategy. Identity.<br />
+                <span className="font-display italic" style={{ background:'linear-gradient(135deg,#3B82F6,#8B5CF6)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>System.</span>
               </h2>
             </div>
             <div className="hidden lg:block text-right">
               <div className="text-dark-3/25 text-[13px]">Average timeline</div>
-              <div className="text-dark-3 font-black text-2xl tracking-tight">3–4 weeks</div>
+              <div className="text-dark-3 font-black text-2xl tracking-tight">3–5 weeks</div>
             </div>
           </div>
           <div className="border-t border-black/6">
@@ -77,11 +88,12 @@ export default function RebrandingPage() {
         <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             <div className="lg:col-span-5">
-              <span className="label label-p tracking-widest mb-4 block">Deliverables</span>
+              <span className="label label-p tracking-widest mb-4 block">What You Get</span>
               <h2 className="text-[clamp(36px,4vw,52px)] font-black tracking-[-0.04em] text-dark-3 leading-none mb-6">
                 Everything included.<br />
-                <span className="font-display italic" style={{ background:'linear-gradient(135deg,#8B5CF6,#F97316)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>Start to finish.</span>
+                <span className="font-display italic" style={{ background:'linear-gradient(135deg,#3B82F6,#F97316)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>Start to finish.</span>
               </h2>
+              <p className="text-dark-3/45 text-[15px] leading-relaxed mb-8">Every deliverable is production-ready and designed to scale across your entire team from day one.</p>
               <Link href="/contact" className="btn-primary inline-flex px-8 py-4">
                 Get a Quote
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
@@ -90,7 +102,7 @@ export default function RebrandingPage() {
             <div className="lg:col-span-6 lg:col-start-7">
               {deliverables.map((d, i) => (
                 <div key={i} className="flex items-center gap-3 py-3.5 border-b border-black/5">
-                  <div className="w-5 h-5 rounded-full flex items-center justify-center shrink-0" style={{ background:'linear-gradient(135deg,#8B5CF6,#7C3AED)' }}>
+                  <div className="w-5 h-5 rounded-full flex items-center justify-center shrink-0" style={{ background:'linear-gradient(135deg,#3B82F6,#1D4ED8)' }}>
                     <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
                   </div>
                   <span className="text-dark-3 text-[15px]">{d}</span>
@@ -107,11 +119,11 @@ export default function RebrandingPage() {
         </div>
         <div className="relative z-10 max-w-[1440px] mx-auto px-8 lg:px-16 text-center">
           <h2 className="text-[clamp(36px,5vw,72px)] font-black tracking-[-0.04em] text-white leading-none mb-8">
-            Time to evolve your<br />
-            <span className="font-display italic" style={{ background:'linear-gradient(135deg,#60A5FA,#F97316)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>brand?</span>
+            Ready to build your<br />
+            <span className="font-display italic" style={{ background:'linear-gradient(135deg,#60A5FA,#F97316)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>agency identity?</span>
           </h2>
           <Link href="/contact" className="btn-primary inline-flex px-10 py-4 text-[15px]">
-            Start Your Rebrand
+            Start Your Agency Brand
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </Link>
         </div>
